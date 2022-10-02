@@ -1,3 +1,10 @@
+/*
+ * SNHU IT-145
+ * 5-4 Milestone: Menu loop and monkey intake
+ * Driver.java
+ * Professor Mahendra Gossai
+ *
+ */
 
 public class Dog extends RescueAnimal {
 

@@ -31,6 +31,33 @@ public class Driver {
         // Hint: create a Scanner and pass it to the necessary
         // methods 
 	// Hint: Menu options 4, 5, and 6 should all connect to the printAnimals() method.
+        while(true) {
+            displayMenu();
+            String menuOption = scnr.nextLine(); // get menu option from user
+            switch(menuOption) {
+                case "1":
+                    intakeNewDog(scnr);
+                    System.out.println("\n\nThis dog is already in our system\n\n");
+                    break;
+                case "2":
+                    intakeNewMonkey(scnr);
+                    break;
+                case "3":
+                    reserveAnimal(scnr);
+                    break;
+                case "4": // prints a list of all dogs stored in the system
+                    printAnimals();
+                    break;
+                case "5": // prints a list of all monkeys stored in the system
+                    printAnimals();
+                    break;
+                case "q": // quits application
+                    System.out.println("Goodbye, ");
+                    System.out.println("Thank you for using the Grazioso Salvare animal check in system.");
+                    System.exit(0);
+                    break;
+            }
+        }
 
     }
 
@@ -65,7 +92,6 @@ public class Driver {
     // Adds monkeys to a list for testing
     //Optional for testing
     public static void initializeMonkeyList() {
-
     }
 
 
@@ -90,7 +116,15 @@ public class Driver {
 	//Instantiate and add the new monkey to the appropriate list
         // For the project submission you must also  validate the input
 	// to make sure the monkey doesn't already exist and the species type is allowed
-        public static void intakeNewMonkey(Scanner scanner) {
+        public static void intakeNewMonkey(Scanner scnr) {
+            System.out.println("What is the name of this monkey?");
+            String name = scnr.nextLine();
+            for(Monkey monkey: monkeyList) {
+                if(monkey.getName().equalsIgnoreCase(name)) {
+                    System.out.println("\n\nThis monkey is already in our system\n\n");
+                    return; // returns to menu
+                }
+            }
             System.out.println("The method intakeNewMonkey needs to be implemented");
         }
 
@@ -115,7 +149,7 @@ public class Driver {
 	// To score "exemplary" you must correctly implement the "available" list.
         public static void printAnimals() {
             System.out.println("The method printAnimals needs to be implemented");
-
         }
 }
+ 
 
