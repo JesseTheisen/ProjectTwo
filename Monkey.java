@@ -1,7 +1,7 @@
 /*
  * SNHU IT-145
  * 5-4 Milestone: Menu loop and monkey intake
- * Driver.java
+ * Monkey.java
  * Professor Mahendra Gossai
  *
  */
@@ -11,6 +11,7 @@ import java.lang.String;
 public class Monkey extends RescueAnimal {
 
     // instance variable
+    
     private String species;
     private String bodyLength;
     private String tailLength;
@@ -50,7 +51,7 @@ public class Monkey extends RescueAnimal {
     public void setBodyLength(String bodyLength) {
         this.setBodyLength = bodyLength;
     }
-    public void setTailLength(String lengthLength) {
+    public void setTailLength(String tailLength) {
         this.setTailLength = tailLength;
     }
   }

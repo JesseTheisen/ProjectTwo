@@ -11,6 +11,7 @@ import java.util.Scanner;
 
 public class Driver {
     // ArrayList for dogs
+    
     private static ArrayList<Dog> dogList = new ArrayList<Dog>();
     // ArrayList for monkeys
     private static ArrayList<Monkey>monkeyList = new ArrayList<Monkey>();
